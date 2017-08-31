@@ -3,69 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel="stylesheet">
     <title>Project 4: Credit/Debit Card Form</title>
 </head>
 <body>
     <div class="container">
-    <h1>Checkout</h1>
-    <label id="cc_name">Card Holder's Name</label><br>
-    <input type="text" name="cc-name" placeholder="JOHN DOUGH">
-    <div class="cc_sec_placeholder">
-        <div class="cc-placeholder">
-            <label>Card Number</label><br>
-            <input name="cc-number" inputmode="numeric" placeholder='••••-••••-••••-••••' maxlength="19" pattern="[0-9]{13,16}">
+        <h1>Credit Card Detail</h1>
+        <div>
+            <input id="cc-name" type="text" name="cc-name">
+            <label for="cc-name">Name on Card</label>
         </div>
-        <div class="security_placeholder">
-            <label>Security Code</label><br>
-            <input name="cc-cvd" inputmode="numeric" placeholder="•••">
+
+        <div>
+            <input id="cc-number" name="cc-number" inputmode="numeric" maxlength="19" pattern="[0-9]{13,16}">
+            <label for="cc-number">Card Number</label>
         </div>
-    </div>
-    <div class="exp_placeholder">
-        <label>Expiration Date</label>
-        <select>
-            <optgroup label="--month--">
-                <option>--month--</option>
-                <option value="01">Jan</option>
-                <option value="02">Feb</option>
-                <option value="03">Mar</option>
-                <option value="04">Apr</option>
-                <option value="05">May</option>
-                <option value="06">Jun</option>
-                <option value="07">Jul</option>
-                <option value="08">Aug</option>
-                <option value="09">Sept</option>
-                <option value="10">Oct</option>
-                <option value="11">Nov</option>
-                <option value="12">Dec</option>
-            </optgroup>
-        </select>
-        <select>
-            <optgroup label="--year--">
-                <option>--year--</option>
-                <option>2016</option>
-                <option>2017</option>
-                <option>2018</option>
-                <option>2019</option>
-                <option>2020</option>
-                <option>2021</option>
-                <option>2022</option>
-                <option>2023</option>
-                <option>2024</option>
-                <option>2025</option>
-                <option>2026</option>
-                <option>2027</option>
-                <option>2028</option>
-                <option>2029</option>
-                <option>2030</option>
-                <option>2031</option>
-            </optgroup>
-        </select>
-    </div>
-        <br>
-    <button type="submit">SUBMIT PAYMENT</button>
-    </div>
-    <div class="back-to-main">
-        <a href="https://zesc.github.io/P1-Multi-Page-Website/">BACK TO MAIN PAGE</a>
+        <div class="date-field">
+          <div class="month">
+            <select name="Month">
+              <option value="january">January</option>
+              <option value="february">February</option>
+              <option value="march">March</option>
+              <option value="april">April</option>
+              <option value="may">May</option>
+              <option value="june">June</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+          </div>
+          <div class="year">
+            <select name="Year">
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-verification">
+            <div class="cvv-input">
+                <input id="cvv" name="cc-cvv" inputmode="numeric">
+                <label for="cvv">CVV / CVC</label>
+            </div>
+            <div class="cvv-details">
+                <p>3 0r 4 digits usually found on the signature strip</p>
+            </div>
+        </div>
+    
+        <button type="submit">Proceed</button>
     </div>
 </body>
 </html>

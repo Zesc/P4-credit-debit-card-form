@@ -1,89 +1,126 @@
-@import 'https://fonts.googleapis.com/css?family=Lobster';
-@import 'https://fonts.googleapis.com/css?family=Lobster+Two';
-
 body{
-    background: rgb(30, 30, 30);
+    background: #eaf9f9;
+    box-sizing: border-box;
 }
 
 .container{
-    width: 50%;
+    width: 30%;
     height: auto;
-    background: rgb(255, 109, 0);
-    color: white;
-    padding: 10px;
-    border-radius: 3px;
-    font-family: 'Lobster Two', cursive;
+    background: #f2f6fc;
+    color: #86939e;
+    border-radius: 5px;
+    margin: auto auto;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #e1e8ee;
 }
 
-h1{
+div.container > h1{
+    padding: 10px;
     text-align: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(134, 147, 158, .7);
     padding-bottom: 20px;
-    font-size: 50px;
-    font-family: 'Lobster', cursive;
+    color: #5e6977;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: auto auto;
 }
 
-.cc_sec_placeholder{
-    display: flex;
-    flex-direction: row;
+div.container > div {
+    position: relative;
+    width: 93%;
+    height: auto;
+    margin: 8% auto;
 }
 
-.security_placeholder{
-    margin-left: 5px;
+div.container > div > label, div.card-verification > div.cvv-input > label{
+    position: absolute;
+    font-size: 20px;
+    left: 10px;
+    top: 19px;
+    font-weight: 300;
+    transition: 0.2s;
 }
 
-input{
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #dcdcdc;
-    border-radius: 2px;
+div.container > div > input, div.card-verification > div.cvv-input > input {
+    margin: auto auto;
+    width: 96%;
+    padding: 20px 0 20px 10px;
+    font-size: 18px;
+    border: 2px solid #e1e8ee;
+    opacity: .7;
+    border-radius: 5px;
     background: rgba(244, 244, 244, 0.51);
 }
 
-label{
+div.container > div > input:focus ~ label, div.card-verification > div.cvv-input > input:focus ~ label{
+    margin-top: -13px;
+    margin-left: -3px;
+    color: #2d87fc;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.container > div > input:focus, div.card-verification > div.cvv-input > input:focus {
+    outline: none;
+}
+
+div.container > div.date-field {
+    display: block;
+    position: static;
+    height: 50px;
+}
+
+.month select, .year select{
+    float: left;
+    height: 42px;
+    width               : 48%;
+    padding-left        : 20px;
+    border              : 2px solid #e1e8ee;
+    border-radius       : 6px;
+    font-size: 19px;
+    color: #5e6977;
+    opacity: .7;
+}
+
+.year select{
+    float: right;
+    height: 42px;
+}
+
+div.card-verification {
+
+}
+
+.card-verification > div.cvv-input, .card-verification > div.card-details{
+    position: relative;
+}
+
+div.card-verification > div.cvv-input > input {
+    width: 35%;
+    float: left;
+}
+
+div.container > div.card-verification > div.cvv-details {
     font-size: 14px;
+    font-weight: 300;
+    width: 55%;
+    height: 50px;
+    float: right;
 }
 
-input[type="text"]{
-    margin-bottom: 10px;
-}
 
-.exp_placeholder{
-    margin-top: 10px;
-}
-
-button{
-    padding: 10px;
-    font-size: 20px;
-    background: orangered;
-    border-radius: 2px;
-    border: 1px solid #dcdcdc;
-    color: #dcdcdc;
-    font-family: 'Lobster Two', cursive;
+div.container > button{
+    font-size: 23px;
+    background: #08e0d5;
+    border-radius: 5px;
+    border: 1px solid #08e0d5;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    width: 91.5%;
+    margin: 5% 5% 5% 5%;
+    padding: 10px 0;
 }
 
 button:hover{
     background: rgba(255, 69, 0, 0.54);
-}
-
-.back-to-main{
-    position: relative;
-    clear: both;
-    text-align: center;
-    top: 30px;
-    margin-bottom: 20px;
-}
-.back-to-main > a{
-    text-decoration: none;
-    color: #d40000;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
-    border-radius: 2px;
-    padding: 10px;
-}
-
-.back-to-main > a:hover{
-    color: white;
-    background-color: red;
-    border-radius: 5px;
 }
